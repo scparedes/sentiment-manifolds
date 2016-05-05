@@ -1,0 +1,16 @@
+In [10]: P
+Out[10]: 0.88925802879291249
+
+In [11]: R
+Out[11]: 0.90377039954980309
+
+In [12]: F1
+Out[12]: 0.89645548423109123
+
+ for label,fileMap in sentmap.itervalues():
+    for star,reviews in fileMap.itervalues():
+        for review in reviews:
+            revStats[star]['avgrevlen']+=len(review)/float(len(reviews)
+            curmax = revStats[star]['maxlen']
+            revStats[star]['maxlen'] = max((curmax,len(review)))
+

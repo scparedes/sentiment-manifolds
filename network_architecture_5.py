@@ -132,7 +132,7 @@ model.compile( loss = 'binary_crossentropy',
 basename = "M5"
 suffix = datetime.datetime.now( ).strftime( "%y%m%d_%I%M%S" )
 filename = "_".join( [ basename, suffix ] )
-weightPath = '../model_data/saved_weights/'+filename
+weightPath = './model_data/saved_weights/'+filename
 checkpoint = ModelCheckpoint( weightPath + '_W.{epoch:02d}-{val_loss:.2f}.hdf5',
                               verbose = 1, )
 earlyStop = EarlyStopping(patience = 1,verbose = 1)
@@ -146,11 +146,11 @@ hist = model.fit( X_train, y_train, batch_size = batch_size,
 
 
 
-model.save_weights( os.path.join( '../model_data/saved_weights', filename ) + '.hdf5' )
+model.save_weights( os.path.join( './model_data/saved_weights', filename ) + '.hdf5' )
 
-with open( os.path.join( '../model_data/model_specs', filename ) + '.config', 'w' ) as f:
+with open( os.path.join( './model_data/model_specs', filename ) + '.config', 'w' ) as f:
 	f.write( str( model.get_config( ) ) )
-with open( os.path.join( '../model_data/model_specs', filename ) + '.hist', 'w' ) as f:
+with open( os.path.join( './model_data/model_specs', filename ) + '.hist', 'w' ) as f:
 	f.write( hist.history )
-with open( os.path.join( '../model_data/model_specs', filename + '.json' ), 'w' ) as f:
+with open( os.path.join( './model_data/model_specs', filename + '.json' ), 'w' ) as f:
 	f.write( model.to_json( ) )

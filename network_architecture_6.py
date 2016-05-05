@@ -136,8 +136,8 @@ hist=model.fit( X_train, y_train, batch_size = batch_size,
            validation_data = (X_test, y_test),
            )
 
-model.save_weights('../model_data/saved_weights/M6.hdf5')
-with open('../model_data/model_specs/M6_config.json','w') as f:
+model.save_weights('./model_data/saved_weights/M6.hdf5')
+with open('./model_data/model_specs/M6_config.json','w') as f:
 	f.write(model.to_json())
 
 
@@ -147,10 +147,10 @@ filename = "_".join( [ basename, suffix ] )
 
 
 
-model.save_weights(os.path.join('../model_data/saved_weights',filename)+'.hdf5')
+model.save_weights(os.path.join('./model_data/saved_weights',filename)+'.hdf5')
 
 
-with open( os.path.join('../model_data/model_specs',filename )+'.config','w') as f:
+with open( os.path.join('./model_data/model_specs',filename )+'.config','w') as f:
 	f.write( str(model.get_config( )) )
-# with open( os.path.join('../model_data/model_specs',filename )+'.hist','wb') as f:
+# with open( os.path.join('./model_data/model_specs',filename )+'.hist','wb') as f:
 # 	cPickle.dump(hist,f)

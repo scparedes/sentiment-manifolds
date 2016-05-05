@@ -7,12 +7,12 @@ import collections
 import regex
 import modelParameters
 
-ALL_REVIEWS_PATH = '../model_data/all_reviews.pickle'  # default file to which to store 'all reviews' string
-ALL_POS_REVIEWS_PATH = '../model_data/all_pos_reviews.pickle'
-ALL_NEG_REVIEWS_PATH = '../model_data/all_neg_reviews.pickle'
-WORD_ONE_HOT_PATH = '../model_data/WORD_one_hot_{}.pickle'  # default file to which to store my_one_hot
-CHAR_ONE_HOT_PATH = '../model_data/CHAR_one_hots_{}.pickle'
-SENTIMENT_2_REVIEWS_PATH = '../model_data/sentmnt2review_map.pickle'
+ALL_REVIEWS_PATH = './model_data/all_reviews.pickle'  # default file to which to store 'all reviews' string
+ALL_POS_REVIEWS_PATH = './model_data/all_pos_reviews.pickle'
+ALL_NEG_REVIEWS_PATH = './model_data/all_neg_reviews.pickle'
+WORD_ONE_HOT_PATH = './model_data/WORD_one_hot_{}.pickle'  # default file to which to store my_one_hot
+CHAR_ONE_HOT_PATH = './model_data/CHAR_one_hots_{}.pickle'
+SENTIMENT_2_REVIEWS_PATH = './model_data/sentmnt2review_map.pickle'
 
 
 def generate_char_list( string, strip_html=True ):
@@ -68,14 +68,14 @@ def sentiment2reviews_map(  ):
 		neg_files_map = collections.defaultdict( list )  # keys = [1, 2, 3, 4]
 
 		# note: review_file[-5] gets rating of review from training set
-		for review_file in os.listdir( '../training_data/train/pos' ):
-			with open( "../training_data/train/pos/" + review_file, 'r' ) as review:
+		for review_file in os.listdir( './training_data/train/pos' ):
+			with open( "./training_data/train/pos/" + review_file, 'r' ) as review:
 				stars = int( review_file[ -5 ] )
 				pos_files_map[ stars if stars else 10 ]. \
 					append( (strip_html_tags( review.read( ) )) )
 
-		for review_file in os.listdir( '../training_data/train/neg' ):
-			with open( "../training_data/train/neg/" + review_file, 'r' ) as review:
+		for review_file in os.listdir( './training_data/train/neg' ):
+			with open( "./training_data/train/neg/" + review_file, 'r' ) as review:
 				neg_files_map[ int( review_file[ -5 ] ) ]. \
 					append( strip_html_tags( review.read( ) ) )
 
@@ -89,7 +89,7 @@ def sentiment2reviews_map(  ):
 				for review in reviewList:
 					ratingCFD[ stars ].update( FreqDist( generate_word_list( review ) ) )
 
-		with open( '../model_data/CFD.pickle', 'wb' ) as outfile:
+		with open( './model_data/CFD.pickle', 'wb' ) as outfile:
 			pickle.dump( ratingCFD, outfile )
 		# no longer needed once pickled
 		del ratingCFD

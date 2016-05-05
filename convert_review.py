@@ -9,21 +9,21 @@ from functools import partial
 from preprocess import (generate_word_list, generate_char_list,
                         generate_one_hot_maps, sentiment2reviews_map)
 
-DESIGN_MATRIX_PATH_WORD = '../model_data/designMatrix_w.pickle'
-TARGET_VECTOR_PATH_WORD = '../model_data/targetVect_w.pickle'
+DESIGN_MATRIX_PATH_WORD = './model_data/designMatrix_w.pickle'
+TARGET_VECTOR_PATH_WORD = './model_data/targetVect_w.pickle'
 
-DESIGN_MATRIX_PATH_CHAR = '../model_data/designMatrix_c.pickle'
-TARGET_VECTOR_PATH_CHAR = '../model_data/targetVect_c.pickle'
+DESIGN_MATRIX_PATH_CHAR = './model_data/designMatrix_c.pickle'
+TARGET_VECTOR_PATH_CHAR = './model_data/targetVect_c.pickle'
 
-DEV_DESIGN_MATRIX_PATH_WORD = '../model_data/dev_designMatrix_w.pickle'
-DEV_TARGET_VECTOR_PATH_WORD = '../model_data/dev_targetVect_w.pickle'
+DEV_DESIGN_MATRIX_PATH_WORD = './model_data/dev_designMatrix_w.pickle'
+DEV_TARGET_VECTOR_PATH_WORD = './model_data/dev_targetVect_w.pickle'
 
-DEV_DESIGN_MATRIX_PATH_CHAR = '../model_data/dev_designMatrix_c.pickle'
-DEV_TARGET_VECTOR_PATH_CHAR = '../model_data/dev_targetVect_c.pickle'
+DEV_DESIGN_MATRIX_PATH_CHAR = './model_data/dev_designMatrix_c.pickle'
+DEV_TARGET_VECTOR_PATH_CHAR = './model_data/dev_targetVect_c.pickle'
 
-TEST_SET_DATA_PATH_WORD = '../model_data/test_set_data_w.pickle'
-TEST_SET_DATA_PATH_CHAR = '../model_data/test_set_data_c.pickle'
-TEST_SET_ID_VECTOR='../model_data/test_set_ID_vect.pickle'
+TEST_SET_DATA_PATH_WORD = './model_data/test_set_data_w.pickle'
+TEST_SET_DATA_PATH_CHAR = './model_data/test_set_data_c.pickle'
+TEST_SET_ID_VECTOR='./model_data/test_set_ID_vect.pickle'
 
 
 

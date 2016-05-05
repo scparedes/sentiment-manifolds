@@ -140,10 +140,10 @@ suffix = datetime.datetime.now( ).strftime( "%y%m%d_%I%M%S" )
 filename = "_".join( [ basename, suffix ] )
 
 
-model.save_weights(os.path.join('../model_data/saved_weights',filename)+'.hdf5')
+model.save_weights(os.path.join('./model_data/saved_weights',filename)+'.hdf5')
 
 
-with open( os.path.join('../model_data/model_specs',filename )+'.config','w') as f:
+with open( os.path.join('./model_data/model_specs',filename )+'.config','w') as f:
 	f.write( model.get_config( ) )
-with open( os.path.join('../model_data_model_specs',filename )+'.hist','w') as f:
+with open( os.path.join('./model_data_model_specs',filename )+'.hist','w') as f:
 	f.write( model.get_config( ) )
