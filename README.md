@@ -1,8 +1,12 @@
 # Sentiment Manifolds
-The research paper for this project can be found at: www.cs.uml.edu/~sparedes/documents/sentiment-manifolds.pdf
+The research paper for this project can be found at: www.cs.uml.edu/~sparedes/documents/sentiment-manifolds.pdf .
 
 ## How to work on this project
-After downloading IMBD data from kaggle site (https://goo.gl/1of8KR), copy the directory train into the training_data directory 
+After downloading IMBD data from kaggle site (https://goo.gl/1of8KR), copy the directory train into the training_data directory.
+
+So the directory structure should be:
+training_data : train : {pos,neg}
+where pos and neg are directories containing reviews.
 
 To train network do the following: 
 modelData is a tuple containing compiled model,
