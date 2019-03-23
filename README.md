@@ -1,5 +1,5 @@
 # Sentiment Manifolds
-The research paper for this project can be found by navigating to Sentiment_Manifolds.pdf in this repo.
+The research paper for this project can be found by navigating to the [sentiment manifolds pdf](https://github.com/scparedes/sentiment-manifolds/blob/master/Sentiment%20Manifolds.pdf) in this repo.
 
 ## How to work on this project
 After downloading IMBD data from kaggle site (https://goo.gl/1of8KR), copy the directory train into the training_data directory.
